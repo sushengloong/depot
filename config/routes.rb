@@ -1,5 +1,10 @@
 Depot::Application.routes.draw do
+  resources :line_items
+
+  resources :carts
+
   get "store/index"
+  match 'store/reset_counter' => 'store#reset_counter', :as => :reset_counter
 
   resources :products
 
