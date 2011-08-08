@@ -6,6 +6,7 @@ class StoreController < ApplicationController
       session[:counter] += 1
     end
     @products  = Product.all
+    @cart = current_cart
   end
   
   def reset_counter
