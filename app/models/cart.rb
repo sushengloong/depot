@@ -1,5 +1,5 @@
 class Cart < ActiveRecord::Base
-  has_many :line_items, :dependent => :destroy
+  has_many :line_items
 
   def total_items
     line_items.sum(:quantity)
